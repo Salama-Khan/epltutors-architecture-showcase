@@ -5,10 +5,10 @@
 
 *(Note: The source code for this platform is held in a private repository as it is a live, revenue-generating SaaS business. This repository serves as a technical architecture and system design showcase).*
 
-## 📌 Project Overview
+## Project Overview
 I built and deployed a full-stack, cloud-hosted educational platform designed to automate the grading of UK GCSE Science papers using deterministic routing paired with Generative AI. The system dynamically analyses student weaknesses, generates custom JSON-structured feedback, and serves asynchronous video curriculum.
 
-## 🛠 The Tech Stack
+## The Tech Stack
 To ensure high availability and secure data handling, I architected the platform using a modern cloud-native stack:
 
 * **Application Logic (SWE):** Python 3.12, Django 5, Django REST Framework
@@ -16,10 +16,10 @@ To ensure high availability and secure data handling, I architected the platform
 * **Infrastructure & DevOps:** AWS Elastic Beanstalk (EC2), AWS S3, Gunicorn, Whitenoise
 * **Version Control & CI/CD:** Git, GitHub, EB CLI deployments
 
-## 🏗 System Architecture
+## System Architecture
 *(Insert a screenshot here of a clean AWS Architecture Diagram showing your Django App talking to RDS, S3, and the OpenAI API)*
 
-## 🚀 Core Engineering Features
+## Core Engineering Features
 
 ### 1. Automated AI Grading Engine (Data/SWE)
 * Integrated the OpenAI Async API to process unstructured student answers against strict, deterministic JSON mark schemes.
@@ -34,7 +34,7 @@ To ensure high availability and secure data handling, I architected the platform
 * Implemented strict environment variable isolation. Managed secure injection of database credentials and API keys via the EB CLI and secure SSH sessions, completely abstracting secrets from the codebase.
 * Engineered robust data migration pipelines to safely transfer local testing data (`.json` dumps) into the production PostgreSQL RDS instance while handling unique constraint violations and schema synchronisation.
 
-## 🐛 Technical Challenges & Solutions
+## Technical Challenges & Solutions
 
 * **The Problem:** During live deployment, loading local database dumps into the AWS PostgreSQL instance triggered severe `IntegrityError` unique constraint violations and missing column `ProgrammingError` crashes.
 * **My Solution:** I executed a secure SSH tunnel into the live Elastic Beanstalk EC2 instance, manually injected the masked environment variables into the bash session, flushed the corrupted schema via the Django shell, and rebuilt the production tables from the ground up before successfully passing the serialized JSON payload.
