@@ -1,7 +1,7 @@
 # EPL Tutors: AI-Powered EdTech Assessment Platform
 
 **Live Application:** [epltutors.com](https://epltutors.com)  
-**Guest Access:** Email: `employer_demo@epltutors.com` | Password: `HireMe2026!`
+**Guest Access:** Username: `employer123` | Email: `employer_demo@epltutors.com` | Password: `HireMe2026!`
 
 *(Note: The source code for this platform is held in a private repository as it is a live, revenue-generating SaaS business. This repository serves as a technical architecture and system design showcase).*
 
