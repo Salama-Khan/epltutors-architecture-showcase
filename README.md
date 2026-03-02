@@ -39,5 +39,5 @@ To ensure high availability and secure data handling, I architected the platform
 * **The Problem:** During live deployment, loading local database dumps into the AWS PostgreSQL instance triggered severe `IntegrityError` unique constraint violations and missing column `ProgrammingError` crashes.
 * **My Solution:** I executed a secure SSH tunnel into the live Elastic Beanstalk EC2 instance, manually injected the masked environment variables into the bash session, flushed the corrupted schema via the Django shell, and rebuilt the production tables from the ground up before successfully passing the serialized JSON payload.
 
-## 📸 Platform Previews
+##  Platform Previews
 *(Add 2-3 high-quality screenshots here. Show the student dashboard, the AI feedback screen, and maybe a snippet of your S3/AWS console).*
