@@ -1,13 +1,13 @@
 # EPL Tutors: AI-Powered EdTech Platform
 
-This repository is a showcase of the cloud infrastructure and backend engineering behind **[epltutors.com](https://epltutors.com)**, a live, production-grade educational platform. 
+This repository is a showcase of the cloud infrastructure and backend engineering behind **[epltutors.com](https://www.epltutors.com)**, a live, production-grade educational platform. 
 
 To protect proprietary business logic and student data, the core application resides in a private repository. This public overview demonstrates my ability to architect, deploy, and scale secure cloud applications using AWS, Python/Django, and the OpenAI API.
 
 ## Live Demo & Guest Access
 You can interact with the live production environment right now. I have provisioned a sandboxed guest account so you can test the AI grading and dynamic quiz generation.
 
-* **URL:** [epltutors.com](https://epltutors.com)
+* **URL:** [epltutors.com](https://www.epltutors.com)
 * **Guest Username:** `employer123`
 * **Guest Password:** `HireMe2026!`
 
